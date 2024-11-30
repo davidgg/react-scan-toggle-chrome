@@ -9,8 +9,9 @@ if ! command -v rsvg-convert &> /dev/null; then
     exit 1
 fi
 
-# Ensure dist/icons directory exists
+# Ensure directories exist
 mkdir -p dist/icons
+mkdir -p chrome-store
 
 # Convert SVGs to PNGs in different sizes
 echo "Generating 16x16 icons..."  
@@ -26,6 +27,6 @@ rsvg-convert -w 128 -h 128 src/icons/icon.svg > dist/icons/icon128.png
 rsvg-convert -w 128 -h 128 src/icons/icon-gray.svg > dist/icons/icon128-gray.png
 
 echo "Generating store icon..."
-rsvg-convert -w 128 -h 128 src/icons/store-icon.svg > store-icon.png
+rsvg-convert -w 128 -h 128 src/icons/store-icon.svg > chrome-store/store-icon.png
 
 echo "Icons generated successfully!" 
