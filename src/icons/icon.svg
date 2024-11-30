@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 128 128"
+  xmlns="http://www.w3.org/2000/svg">
+  <!-- React-like atom -->
+  <ellipse cx="64" cy="64" rx="24" ry="60" stroke="#7a68e8" stroke-width="8" fill="none" transform="rotate(30 64 64)"/>
+  <ellipse cx="64" cy="64" rx="24" ry="60" stroke="#7a68e8" stroke-width="8" fill="none" transform="rotate(90 64 64)"/>
+  <ellipse cx="64" cy="64" rx="24" ry="60" stroke="#7a68e8" stroke-width="8" fill="none" transform="rotate(150 64 64)"/>
+
+  <!-- Center dot -->
+  <circle cx="64" cy="64" r="8" fill="#7a68e8"/>
+
+  <!-- Eye icon (based on Lucide eye icon) -->
+  <g transform="translate(85,85) scale(1.2)">
+    <path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" stroke="#ff4154" stroke-width="3" fill="none"/>
+    <circle cx="12" cy="12" r="3" stroke="#ff4154" stroke-width="3" fill="none"/>
+  </g>
+</svg> 

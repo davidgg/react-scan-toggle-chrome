@@ -1,0 +1,29 @@
+React Scan Toggle - Visualize React Component Renders
+
+This is a wrapper for the million's React Scan library 
+
+[NOT AN OFFICIAL REACT SCAN EXTENSION]
+
+IMPORTANT: This extension requires React Developer Tools to be installed and enabled.
+
+A lightweight extension that helps you visualize and analyze React component renders in real-time. Toggle React Scan functionality with a single click to debug performance issues and understand your React application's behavior.
+
+Key Features:
+• One-click activation/deactivation
+• Visual feedback through colored overlays
+• Track component render counts and timing
+• Inspect component props and state changes
+• State persists while navigating within tabs
+• Zero configuration required
+• Works with any React application
+• Secure local script execution (no external connections)
+
+This community-built tool makes React Scan more accessible by providing an easy-to-use toggle interface. Perfect for developers who want to quickly analyze React component performance without modifying their codebase.
+
+Note: This is not an official React Scan extension. It's a community-built tool that incorporates React Scan (MIT licensed, Copyright 2024 Aiden Bai, Million Software, Inc.) to make its functionality more accessible.
+
+Privacy & Security:
+• No data collection
+• No external connections
+• All processing happens locally
+• No permissions beyond the active tab

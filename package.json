@@ -1,0 +1,16 @@
+{
+  "name": "react-scan-toggle",
+  "version": "1.0.0",
+  "description": "Chrome extension to toggle React Scan functionality",
+  "scripts": {
+    "build:icons": "./scripts/build-icons.sh",
+    "update:react-scan": "./scripts/update-react-scan.sh",
+    "build": "zip -r build.zip dist/",
+    "postinstall": "npm run update:react-scan"
+  },
+  "dependencies": {
+    "react-scan": "0.0.35"
+  },
+  "author": "davidgg.es",
+  "license": "MIT"
+}

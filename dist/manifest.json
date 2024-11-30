@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "React Scan Toggle",
+  "version": "1.0",
+  "description": "Toggle React Scan functionality to analyze React component renders",
+  "author": "davidgg.es",
+  "permissions": ["activeTab", "scripting"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'none'"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16-gray.png",
+      "48": "icons/icon48-gray.png",
+      "128": "icons/icon128-gray.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["react-scan.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
