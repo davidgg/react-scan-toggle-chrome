@@ -2,7 +2,9 @@
 
 <div align="center">
   <img src="src/icons/store-icon.svg" alt="React Scan Toggle Icon" width="128" height="128">
-  
+</div>
+
+<div align="center">
   <a href="https://chrome.google.com/webstore/detail/react-scan-toggle/jenlhondkkckfmehobgliecmdngfdkbo">
     <img alt="Available in the Chrome Web Store" src="chrome-store/chrome-store-badge-mid.png" width="170">
   </a>
