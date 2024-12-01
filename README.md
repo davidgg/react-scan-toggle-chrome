@@ -7,6 +7,8 @@
 A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/reactscan) functionality in any React application.
 
 > **Note**: This is not an official React Scan extension. It's a community-built tool to make React Scan more accessible.
+>
+> **Current React Scan Version**: 0.0.35
 
 ## Screenshot
 
