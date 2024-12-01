@@ -1,7 +1,11 @@
 # React Scan Toggle
 
 <div align="center">
-  <img src="chrome-store/store-icon.png" alt="React Scan Toggle Icon" width="128" height="128">
+  <img src="src/icons/store-icon.svg" alt="React Scan Toggle Icon" width="128" height="128">
+  
+  <a href="https://chrome.google.com/webstore/detail/react-scan-toggle/jenlhondkkckfmehobgliecmdngfdkbo">
+    <img alt="Available in the Chrome Web Store" src="chrome-store/chrome-store-badge-mid.png" width="170">
+  </a>
 </div>
 
 A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/reactscan) functionality in any React application.
@@ -35,10 +39,10 @@ A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/re
 
 ## Installation
 
-### From Chrome Web Store
+### From Chrome Web Store (Recommended)
 
 1. Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) if you haven't already
-2. Visit the [React Scan Toggle](https://chrome.google.com/webstore/detail/react-scan-toggle) in the Chrome Web Store
+2. Visit the [React Scan Toggle](https://chrome.google.com/webstore/detail/react-scan-toggle/jenlhondkkckfmehobgliecmdngfdkbo) in the Chrome Web Store
 3. Click "Add to Chrome"
 4. Confirm the installation
 
