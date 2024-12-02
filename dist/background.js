@@ -1,6 +1,15 @@
 // Store active state per tab
 const activeTabsMap = new Map();
 
+// Check if URL is accessible (not chrome://, etc)
+function isAccessibleUrl(url) {
+  return (
+    url &&
+    !url.startsWith("chrome://") &&
+    !url.startsWith("chrome-extension://")
+  );
+}
+
 // Function to update the extension icon
 async function updateIcon(tabId, isActive) {
   const path = isActive
@@ -25,6 +34,11 @@ async function updateIcon(tabId, isActive) {
 // Check if React Scan is active in the page
 async function checkReactScanState(tabId) {
   try {
+    const tab = await chrome.tabs.get(tabId);
+    if (!isAccessibleUrl(tab.url)) {
+      return false;
+    }
+
     const result = await chrome.scripting.executeScript({
       target: { tabId },
       world: "MAIN",
@@ -90,6 +104,11 @@ async function injectReactScan(tabId) {
 // Remove React Scan script
 async function removeReactScan(tabId) {
   try {
+    const tab = await chrome.tabs.get(tabId);
+    if (!isAccessibleUrl(tab.url)) {
+      return;
+    }
+
     await chrome.scripting.executeScript({
       target: { tabId },
       world: "MAIN",
@@ -111,6 +130,10 @@ async function removeReactScan(tabId) {
 
 // Handle extension icon click
 chrome.action.onClicked.addListener(async (tab) => {
+  if (!isAccessibleUrl(tab.url)) {
+    return;
+  }
+
   const isActive = !activeTabsMap.get(tab.id);
   activeTabsMap.set(tab.id, isActive);
 
@@ -125,13 +148,17 @@ chrome.action.onClicked.addListener(async (tab) => {
 
 // Initialize new tabs
 chrome.tabs.onCreated.addListener(async (tab) => {
-  if (tab.id) {
+  if (tab.id && isAccessibleUrl(tab.url)) {
     await initializeTab(tab.id);
   }
 });
 
 // Handle tab updates (e.g., when URL changes)
 chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
+  if (!isAccessibleUrl(tab.url)) {
+    return;
+  }
+
   if (changeInfo.status === "complete") {
     // Check the actual state in the page
     const isReactScanActive = await checkReactScanState(tabId);

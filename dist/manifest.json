@@ -5,6 +5,7 @@
   "description": "Toggle React Scan functionality to analyze React component renders",
   "author": "davidgg.es",
   "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["<all_urls>"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'none'"
   },
