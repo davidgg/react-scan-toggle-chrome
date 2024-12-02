@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "React Scan Toggle",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Toggle React Scan functionality to analyze React component renders",
   "author": "davidgg.es",
   "permissions": ["activeTab", "scripting"],
