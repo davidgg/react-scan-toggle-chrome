@@ -10,7 +10,7 @@
   </a>
 </div>
 
-A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/reactscan) functionality in any React application.
+A Chrome extension to easily toggle [React Scan](https://react-scan.com/) functionality in any React application.
 
 > **Note**: This is not an official React Scan extension. It's a community-built tool to make React Scan more accessible.
 >
@@ -32,7 +32,7 @@ A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/re
 ## Requirements
 
 - Google Chrome or Chromium-based browser
-- [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) extension must be installed
+- [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) extension must be installed
 - For development:
   - Node.js 14 or higher
   - npm or yarn
@@ -43,14 +43,14 @@ A Chrome extension to easily toggle [React Scan](https://github.com/reactscan/re
 
 ### From Chrome Web Store (Recommended)
 
-1. Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) if you haven't already
-2. Visit the [React Scan Toggle](https://chrome.google.com/webstore/detail/react-scan-toggle/jenlhondkkckfmehobgliecmdngfdkbo) in the Chrome Web Store
+1. Install [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) if you haven't already
+2. Visit the [React Scan Toggle](https://chromewebstore.google.com/detail/react-scan-toggle/jenlhondkkckfmehobgliecmdngfdkbo) in the Chrome Web Store
 3. Click "Add to Chrome"
 4. Confirm the installation
 
 ### Manual Installation (Development)
 
-1. Install [React Developer Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) if you haven't already
+1. Install [React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) if you haven't already
 2. Clone this repository
 3. Open Chrome and navigate to `chrome://extensions/`
 4. Enable "Developer mode" in the top right
@@ -115,7 +115,7 @@ The build scripts are located in the `scripts` directory and include error handl
 
 ## About React Scan
 
-React Scan is a powerful tool for visualizing React component renders. For more information, visit the [official React Scan repository](https://github.com/reactscan/reactscan).
+React Scan is a powerful tool for visualizing React component renders. For more information, visit the [official React Scan repository](https://github.com/aidenybai/react-scan).
 
 ## Security
 
