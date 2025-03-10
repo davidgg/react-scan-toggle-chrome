@@ -84,15 +84,19 @@ async function injectReactScan(tabId) {
         script.textContent = code; // Using the actual code instead of external URL
         (document.head || document.documentElement).appendChild(script);
 
+        if (window.reactScan) {
+          // This is required to force React Scan to run in production, this is the goal of this extension
+          window.reactScan({ dangerouslyForceRunInProduction: true });
+        }
         // Enable React Scan if it's already initialized
         if (window.__REACT_SCAN__) {
-          window.__REACT_SCAN__.ReactScanInternals.options.enabled = true;
+          window.__REACT_SCAN__.ReactScanInternals.instrumentation.isPaused.value = false;
         }
 
-        const toolbar = document.getElementById("react-scan-toolbar");
-        if (toolbar) {
-          toolbar.style.display = "block";
-        }
+        const toolbar = document.querySelectorAll("#react-scan-root");
+        toolbar.forEach((t) => {
+          t.style.display = "none";
+        });
       },
       args: [scriptContent],
     });
@@ -114,13 +118,13 @@ async function removeReactScan(tabId) {
       world: "MAIN",
       func: () => {
         if (window.__REACT_SCAN__) {
-          window.__REACT_SCAN__.ReactScanInternals.options.enabled = false;
+          window.__REACT_SCAN__.ReactScanInternals.instrumentation.isPaused.value = true;
         }
 
-        const toolbar = document.getElementById("react-scan-toolbar");
-        if (toolbar) {
-          toolbar.style.display = "none";
-        }
+        const toolbar = document.querySelectorAll("#react-scan-root");
+        toolbar.forEach((t) => {
+          t.style.display = "none";
+        });
       },
     });
   } catch (err) {
@@ -137,6 +141,7 @@ chrome.action.onClicked.addListener(async (tab) => {
   const isActive = !activeTabsMap.get(tab.id);
   activeTabsMap.set(tab.id, isActive);
 
+  console.log("isActive", isActive);
   await updateIcon(tab.id, isActive);
 
   if (isActive) {

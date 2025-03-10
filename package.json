@@ -9,7 +9,7 @@
     "postinstall": "npm run update:react-scan"
   },
   "dependencies": {
-    "react-scan": "0.0.35"
+    "react-scan": "0.2.14"
   },
   "author": "davidgg.es",
   "license": "MIT"

@@ -1,1 +1,0 @@
-Found. Redirecting to /react-scan@0.0.35/dist/auto.global.js

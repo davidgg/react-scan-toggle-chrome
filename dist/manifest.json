@@ -1,11 +1,10 @@
 {
   "manifest_version": 3,
   "name": "React Scan Toggle",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Toggle React Scan functionality to analyze React component renders",
   "author": "davidgg.es",
   "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["<all_urls>"],
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'none'"
   },

@@ -1,6 +1,6 @@
 React Scan Toggle - Visualize React Component Renders
 
-This is a wrapper for the million's React Scan library (version 0.0.35)
+This is a wrapper for the million's React Scan library (version 0.2.14)
 
 [NOT AN OFFICIAL REACT SCAN EXTENSION]
 
